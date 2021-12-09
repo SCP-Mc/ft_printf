@@ -8,8 +8,8 @@ int desolve(const char *format, int i, va_list arg_ptr)
         return(ft_putchar((char)va_arg(arg_ptr, int)));
     else if(format[i] == 's')
         return(ft_putstr((char *)va_arg(arg_ptr, char *)));
-    else if(format[i] == 'd')
-        return(ft_putnbr(va_arg(arg_ptr, int)));
+    else if(format[i] == 'd' || format[i] == 'i')
+        return(waw(va_arg(arg_ptr, int)));
     else if(format[i] == 'u')
         return(ft_putunbr(va_arg(arg_ptr, unsigned int)));
     else if(format[i] == 'x' || format[i] == 'X')
@@ -44,3 +44,11 @@ int	ft_printf(const char *format, ...)
 	va_end(arg_ptr);
 	return (count);
 }
+
+// int	main()
+// {
+// 	//int *she = malloc(16);
+// 	int re = ft_printf("%d\n", -1);
+// 	int ra = printf("%d\n", -1);
+// 	printf("%d---%d", re, ra);
+// }

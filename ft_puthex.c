@@ -1,6 +1,6 @@
 #include"ft_printf.h"
 
-int put_hex(unsigned int n, char input)
+int ft_puthex(unsigned int n, char input)
 {
     int i;
     int total;

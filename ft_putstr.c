@@ -5,12 +5,9 @@ int ft_putstr(char *s)
     int i;
     
     i = 0;
-    if (!s[i])
+    if (!s)
         return (write(1, "(null)", 6));
     while(s[i])
-        {
-            write(1, s, 1);
-            i++;
-        }
+        i += write(1, &s[i], 1);
     return(i);
 }
